@@ -24,17 +24,15 @@ const Home = () => {
 					<Icon as={TbCoin} color={"orange.400"} w={"40px"} h={"50px"}/>
 				</Box>
 				<Box mb="50px" display={"flex"} flexWrap="wrap" gap={"25px"} mt = "20px">
-				{booksBestSeller.map(book => {
+				{booksBestSeller?.map(book => {
 				return(
 				<Card 
-					productId={book.productId}
-					productName={book.productName}  
-					imageUrl = {book.images[0]?.imageURL} 
-					productPrice = {book.productVariants[0]?.productSalePrice} 
+					productId={book.id}
+					productName={book.title}  
+					imageUrl = {book.imageUrl} 
+					productPrice = {book.price} 
 					sold = {book.sold}
 					quantities = {book.quantity}
-					vendorName = {book.vendorName}
-					variantQuantities = {book.productVariants?.length}
 				/>
 				)
 				})}
@@ -52,17 +50,15 @@ const Home = () => {
 					<Icon as={BiCheckDouble} color={"green"} w={"50px"} h={"46px"}/>					
 				</Box>
 				<Box mb="50px" display={"flex"} flexWrap="wrap" gap={"25px"} mt = "20px">
-				{booksTopNew.map(book => {
+				{booksTopNew?.map(book => {
 				return(
 				<Card 
-					productId={book.productId}
-					productName={book.productName}  
-					imageUrl = {book.images[0]?.imageURL} 
-					productPrice = {book.productVariants[0]?.productSalePrice} 
+					productId={book.id}
+					productName={book.title}  
+					imageUrl = {book.imageUrl} 
+					productPrice = {book.price} 
 					sold = {book.sold}
 					quantities = {book.quantity}
-					vendorName = {book.vendorName}
-					variantQuantities = {book.productVariants?.length}
 				/>
 				)
 				})}
@@ -76,17 +72,15 @@ const Home = () => {
 				maxW={"container.xl"}
 			>
 				<Box mb="100px" display={"flex"} flexWrap="wrap" gap={"25px"}>
-					{books.map(book => {
+					{books?.map(book => {
 					return(
 					<Card 
-						productId={book.productId}
-						productName={book.productName}  
-						imageUrl = {book.images[0]?.imageURL} 
-						productPrice = {book.productVariants[0]?.productSalePrice} 
+						productId={book.id}
+						productName={book.title}  
+						imageUrl = {book.imageUrl} 
+						productPrice = {book.price} 
 						sold = {book.sold}
 						quantities = {book.quantity}
-						vendorName = {book.vendorName}
-						variantQuantities = {book.productVariants?.length}
 					/>
 					)
 				})}

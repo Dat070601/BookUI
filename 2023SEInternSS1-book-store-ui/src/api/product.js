@@ -2,7 +2,7 @@ import axios from 'axios'
 
 const fetchProductAsync = async (url) => {
   try {
-    const response = await axios.get(`${url}/api/product`)
+    const response = await axios.get(`${url}/api/book?page=1&pageSize=10`)
     return response.data
   } catch (error) {
     console.log(error)
@@ -11,7 +11,7 @@ const fetchProductAsync = async (url) => {
 
 const getProductById = async (url, id) => {
   try {
-    const response = await axios.get(`${url}/api/product/${id}`)
+    const response = await axios.get(`${url}/api/book/${id}`)
     return response.data
   } catch (error) {
     console.log(error)
@@ -20,7 +20,7 @@ const getProductById = async (url, id) => {
 
 const fetchMostProductBestSellerAsync = async (url) => {
   try {
-    const response = await axios.get(`${url}/api/product/product-most-seller`)
+    const response = await axios.get(`${url}/api/book/product-most-seller`)
     return response.data
   } catch (error) {
     console.log(error)
@@ -29,7 +29,7 @@ const fetchMostProductBestSellerAsync = async (url) => {
 
 const fetchTopNewProductsAsync = async (url) => {
   try {
-    const response = await axios.get(`${url}/api/product/product-top-new`)
+    const response = await axios.get(`${url}/api/book/product-top-new`)
     return response.data
   } catch (error) {
     console.log(error)

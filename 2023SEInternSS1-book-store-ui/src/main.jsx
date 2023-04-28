@@ -13,9 +13,9 @@ ReactDOM.createRoot(document.getElementById('root')).render(
 		<ChakraProvider>
 			<BrowserRouter>
 				<Provider store={store}>
-					<Navbar>
-						<App />	
-					</Navbar>
+					<App />	
+					{/* <Navbar>
+					</Navbar> */}
 				</Provider>
 			</BrowserRouter>
 		</ChakraProvider>

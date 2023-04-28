@@ -3,7 +3,7 @@ import React from 'react'
 import { COLOR } from '../../constant'
 import { Link, useNavigate } from 'react-router-dom'
 
-const Card = ({ imageUrl, productName, productPrice, productId, sold, quantities, vendorName, variantQuantities}) => {
+const Card = ({ imageUrl, productName, productPrice, productId, sold, quantities}) => {
 
     const navigate = useNavigate()
 
@@ -11,11 +11,9 @@ const Card = ({ imageUrl, productName, productPrice, productId, sold, quantities
         <Tooltip 
             label={<div>
                 <p>Name: {productName}</p>
-                <p>PriceSale: {Intl.NumberFormat('de-DE', { style: 'currency', currency: 'USD' }).format(productPrice)} </p>
+                <p>PriceSale: {new Intl.NumberFormat('vi-VN', { style: 'currency', currency: 'VND'}).format(productPrice)} </p>
                 <p>Quantities: {quantities} products</p>
                 <p>Sold: {sold} products</p>
-                <p>Vendor: {vendorName}</p>
-                <p>Number of Variant: {variantQuantities}</p>
             </div>} 
             placement='right' hasArrow>
             <Box onClick={() => {
@@ -36,7 +34,7 @@ const Card = ({ imageUrl, productName, productPrice, productId, sold, quantities
                         <Link to={`/product/${productId}`} >{productName}</Link>
                     </Text>
                     <Box ml="5px" mt="20px" mb="10px" display={'flex'} gap={'20px'} marginTop={'1px'}>
-                        <Text mt= "13px"fontWeight={"medium"} color={"tomato"} fontSize='20px'>{Intl.NumberFormat('de-DE', { style: 'currency', currency: 'USD' }).format(productPrice)} </Text>
+                        <Text mt= "13px"fontWeight={"medium"} color={"tomato"} fontSize='20px'>{new Intl.NumberFormat('vi-VN', { style: 'currency', currency: 'VND'}).format(productPrice)} </Text>
                         <Box>
                             <Text fontWeight={"light"} fontSize='13px'>Sold: {Intl.NumberFormat('de-DE').format(sold)}</Text>
                             <Text fontWeight={"light"} fontSize={'13px'}>Quantities: {Intl.NumberFormat('de-DE').format(quantities)}</Text>
