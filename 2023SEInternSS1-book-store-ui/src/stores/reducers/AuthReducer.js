@@ -11,7 +11,7 @@ const AuthSlice = createSlice({
 			if (action.payload.isSuccess == false)
 			{
 				state.isSuccess = action.payload.isSuccess;
-				state.message = 'Failed to login, please try again';
+				state.message = action.payload.message;
 			}
 			else {
 				state.isSuccess = action.payload.isSuccess;

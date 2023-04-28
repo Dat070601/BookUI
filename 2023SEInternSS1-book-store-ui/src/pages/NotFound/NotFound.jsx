@@ -1,13 +1,14 @@
 import { Box, Heading, Text } from '@chakra-ui/react';
 import React from 'react';
-import { COLOR } from '../../constant';
 
 const NotFound = () => {
 	return (
-		<Box display={'flex'} gap="18px" justifyContent={'center'} alignItems="center" height={'700px'}>
-			<Heading fontSize={'50px'} fontWeight={'bold'} color={COLOR}>404</Heading>
-			<Text mt="20px" fontSize={'25px'} color={COLOR} fontWeight={'light'}>Page Not found</Text>
+		<Container display={'flex'} alignItems={'center'} justifyContent={'center'} height={'90vh'}>
+		<Box textAlign="center" boxSize={'sm'}>
+		  <Image src='https://res.cloudinary.com/duu07kasy/image/upload/v1682648929/5203299_vxoqmy.jpg'></Image>
+		  <Text mt="20px" fontSize={'20px'} fontWeight={'medium'} color={'1B2E35'}>Sorry, Page Not Found!</Text>
 		</Box>
+	  </Container>
 	);
 };
 
